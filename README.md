@@ -46,9 +46,9 @@ translation_dashboard/
 │ └── index.html # Main UI template
 
 │
-└── static/
+├── static/
 
-└── style.css # Styling for the web interface
+| └── style.css # Styling for the web interface
 
 
 ---
