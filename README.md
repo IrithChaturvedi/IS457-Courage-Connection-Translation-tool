@@ -31,15 +31,23 @@ It requires **no API keys**, **no billing**, and can run entirely offline except
 
 translation_dashboard/
 │
+
 ├── app.py # Flask application backend
+
 ├── utils.py # Document parsing utilities (txt/docx/pdf)
+
 ├── requirements.txt # Python dependencies
+
 ├── .env (optional) # Not needed for googletrans
+
 │
 ├── templates/
+
 │ └── index.html # Main UI template
+
 │
 └── static/
+
 └── style.css # Styling for the web interface
 
 
