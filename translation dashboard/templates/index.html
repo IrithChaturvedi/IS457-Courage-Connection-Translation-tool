@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Courage Connection – Translation Tool</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 <div class="container">
-    <h1>Courage Connection – Translation Tool</h1>
-    <p class="subtitle">
-        Translate English text or documents into Spanish or French.
-    </p>
+
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='image.png') }}" alt="Courage Connection Logo" class="logo">
+    </div>
+
+    <h1>Courage Connection – Translation Dashboard</h1>
+    <p class="subtitle">Translate English text or documents into Spanish or French.</p>
 
     {% if error_message %}
         <div class="alert error">{{ error_message }}</div>
     {% endif %}
 
     <form method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="language">Translate to:</label>
-            <select name="language" id="language">
-                {% for lang in languages %}
-                    <option value="{{ lang }}" {% if lang == selected_language %}selected{% endif %}>
-                        {{ lang }}
-                    </option>
-                {% endfor %}
-            </select>
-        </div>
 
-        <div class="form-group">
-            <label for="text_input">Enter text (optional if uploading a file):</label>
-            <textarea id="text_input" name="text_input" rows="6">{{ original_text }}</textarea>
-        </div>
+        <label>Translate to:</label>
+        <select name="language">
+            {% for lang in languages %}
+                <option value="{{ lang }}" {% if lang == selected_language %}selected{% endif %}>{{ lang }}</option>
+            {% endfor %}
+        </select>
 
-        <div class="form-group">
-            <label for="file_input">Or upload a .txt or .docx file:</label>
-            <input type="file" id="file_input" name="file_input" accept=".txt,.docx">
-            <p class="hint">If a file is uploaded, its content will be translated instead of the text box.</p>
-        </div>
+        <label>Enter text:</label>
+        <textarea name="text_input" rows="5">{{ original_text }}</textarea>
+
+        <label>Or upload a document (.txt, .docx, .pdf):</label>
+        <input type="file" name="file_input" accept=".txt,.docx,.pdf">
 
         <button type="submit">Translate</button>
     </form>
