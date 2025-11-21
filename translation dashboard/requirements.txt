@@ -1,0 +1,5 @@
+python-dotenv
+googletrans==3.1.0a0
+python-docx
+pypdf
+Flask
