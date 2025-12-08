@@ -60,8 +60,123 @@ translation_dashboard/
 `git clone https://github.com/IrithChaturvedi/IS457-Courage-Connection-Translation-tool`
 `cd translation_dashboard`
 
+### 2. Python Installation and Envirnment Creation (If not done already) - IGNORE Otherwise
 
-### 2. Install required packages
+🛠️ Installation on Windows (No PATH Modifications Required)
+
+The target user has Python installed at:
+
+```
+C:\Users\vhedin\AppData\Local\Programs\Python\Python314-32\
+```
+
+Since Python cannot be added to the system PATH, the following steps show how to create a virtual environment and run the project **using this exact Python installation**.
+
+---
+
+### **Open PowerShell in the Project Folder**
+
+1. Open File Explorer  
+2. Navigate to the project folder (the one containing `app.py`)  
+3. **Shift + Right Click** → select **Open PowerShell window here**
+
+Your terminal should now look similar to:
+
+```
+C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool>
+```
+
+---
+
+**Create a Virtual Environment**
+
+Run this command exactly:
+
+```powershell
+"C:\Users\vhedin\AppData\Local\Programs\Python\Python314-32\python.exe" -m venv venv
+```
+
+This creates a new folder called:
+
+```
+venv/
+```
+
+inside the project directory.
+
+---
+
+### **Activate the Virtual Environment**
+
+Run:
+
+```powershell
+.\venv\Scripts\activate
+```
+
+After activation, the terminal prompt should begin with `(venv)`:
+
+```
+(venv) C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool>
+```
+
+---
+
+### **Install Required Libraries**
+
+Run:
+
+```powershell
+pip install -r requirements.txt
+```
+
+This installs all dependencies (Flask, googletrans, python-docx, pypdf).
+
+---
+
+**Run the Application**
+
+Start the Flask server using:
+
+```powershell
+python app.py
+```
+
+If Python is not recognized, use the full path:
+
+```powershell
+"C:\Users\vhedin\AppData\Local\Programs\Python\Python314-32\python.exe" app.py
+```
+
+Once the server starts, open a browser and go to:
+
+```
+http://127.0.0.1:5000
+```
+
+You will now see the translation dashboard.
+
+---
+
+**Stopping and Restarting the App**
+
+To stop the server:
+
+```
+Ctrl + C
+```
+
+To run it again:
+
+```powershell
+cd C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool>
+.\venv\Scripts\activate
+python app.py
+```
+
+---
+
+### 3. Install required packages
 
 `pip install -r requirements.txt`
 
