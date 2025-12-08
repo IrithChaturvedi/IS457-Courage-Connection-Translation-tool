@@ -122,6 +122,13 @@ For a production or nonprofit deployment, consider the **Google Cloud Translatio
 - Deploy as a standalone desktop app
 
 ---
+## Maintenance
+- Restart the application and your computer regularly if you notice any slow performance.
+- Keep the entire project folder in its current location and do not change any file names inside it.
+- If a translation fails, close the application, restart your computer, and then try the translation again.
+- Before uploading a new document, always check that it is saved as a .txt, .docx, or .pdf file.
+- Ensure your computer has enough free space, as large documents can take time to process.
 
+---
 ## 🙏 Acknowledgments
 This tool was created as part of a student project to support **Courage Connection** and enhance accessibility for community members whose primary language is not English.
