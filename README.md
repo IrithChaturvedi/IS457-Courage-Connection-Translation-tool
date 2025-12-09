@@ -166,7 +166,7 @@ Ctrl + C
 To run it again:
 
 ```powershell
-cd "C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool\translation dashboard">
+cd "C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool\translation dashboard"
 .\venv\Scripts\Activate.bat
 .\venv\Scripts\python.exe app.py
 ```
