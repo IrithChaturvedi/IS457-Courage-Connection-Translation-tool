@@ -60,7 +60,10 @@ translation_dashboard/
 `git clone https://github.com/IrithChaturvedi/IS457-Courage-Connection-Translation-tool`
 `cd translation_dashboard`
 
-### 2. Python Installation and Envirnment Creation (If not done already) - IGNORE Otherwise
+---
+### You can skip #2 if Python is already installed on the system and added to PATH
+---
+### 2. Python Installation and Environment Creation (If not done already) - IGNORE Otherwise
 
 🛠️ Installation on Windows (No PATH Modifications Required)
 
@@ -83,7 +86,7 @@ Since Python cannot be added to the system PATH, the following steps show how to
 Your terminal should now look similar to:
 
 ```
-C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool>
+C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool\translation dashboard>
 ```
 
 ---
@@ -111,23 +114,23 @@ inside the project directory.
 Run:
 
 ```powershell
-.\venv\Scripts\activate
+.\venv\Scripts\Activate.bat
 ```
 
 After activation, the terminal prompt should begin with `(venv)`:
 
 ```
-(venv) C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool>
+(venv) C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool\translation dashboard>
 ```
 
 ---
 
-### **Install Required Libraries**
+### **Install Required Libraries - Only for setting it up the first time**
 
 Run:
 
 ```powershell
-pip install -r requirements.txt
+.\venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
 This installs all dependencies (Flask, googletrans, python-docx, pypdf).
@@ -139,13 +142,7 @@ This installs all dependencies (Flask, googletrans, python-docx, pypdf).
 Start the Flask server using:
 
 ```powershell
-python app.py
-```
-
-If Python is not recognized, use the full path:
-
-```powershell
-"C:\Users\vhedin\AppData\Local\Programs\Python\Python314-32\python.exe" app.py
+.\venv\Scripts\python.exe app.py
 ```
 
 Once the server starts, open a browser and go to:
@@ -169,19 +166,18 @@ Ctrl + C
 To run it again:
 
 ```powershell
-cd C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool>
-.\venv\Scripts\activate
-python app.py
+cd "C:\Users\vhedin\OneDrive - Courage Connection\IS457-Courage-Connection-Translation-tool\translation dashboard">
+.\venv\Scripts\Activate.bat
+.\venv\Scripts\python.exe app.py
 ```
 
+---
+Follow the steps below if Python has already been added to PATH and user does not require virtual environment setup
 ---
 
 ### 3. Install required packages
 
 `pip install -r requirements.txt`
-
-
----
 
 ## ▶️ Running the App
 
